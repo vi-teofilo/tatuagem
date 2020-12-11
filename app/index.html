@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Agendamento de Tatuagem</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+</head>
+
+<body class="container backgroundImg" >
+
+    <div style="size: 100px; margin-right: -100px; " >
+        <img src="img/dragaofundo.png" style=" position: fixed; margin-left: 700px; margin-top: -120px;">
+     </div>
+
+    <div>
+        <br><br>
+    <h1 class="titulo-estilo">Agendar Tatuagem</h1>
+</div><br>
+    <div id="mensagemView"></div>
+    <br>
+    <form class="form">
+        
+        <div>
+            <label for="cliente" class="texto-estilo">Cliente</label><br>
+            <input type="text" id="cliente" class="campos"  required/>
+        </div><br>
+        
+        <div>
+            <label for="tatuador" class="texto-estilo">Tatuador</label><br>
+            <input type="text"  id="tatuador" class="campos"  required/>
+        </div><br>
+  
+        
+        <div>
+            <label for="valor" class="texto-estilo">Valor da Tatuagem</label><br>
+            <input id="valor" type="number" class="campos"  min="0.01" step="0.01" value="0.0" required />
+        </div><br>
+
+        <div>
+            <label for="data" class="texto-estilo" >Data de Agendamento</label><br>
+            <input type="datetime-local"  id="data" class="campo-data" locale="pt-br" required autofocus/> >        
+            <button class="button-custom" type="submit" a>Agendar</button>
+    </div>
+
+
+        
+    
+    </form>
+
+    <br>
+    <br>
+
+
+    <div id="agendasView" style="margin-bottom: 50px;"></div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="js/models/Agendamento.js"></script>
+    <script src="js/models/Agendas.js"></script>
+    <script src="js/controllers/AgendamentoController.js"></script>
+    <script src="js/views//View.js"></script>
+    <script src="js/views/AgendasView.js"></script>
+    <script src="js/views/MensagemView.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
